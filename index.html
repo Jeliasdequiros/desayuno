@@ -1,53 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <!-- SEO = Básico -->
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- SEO = Redes Sociales -->
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+<head>
+  <meta charset="utf-8" />
+  <!-- SEO = Básico -->
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
-    <link rel="manifest" href="site.webmanifest" />
-    <!-- icono de acceso para IOS -->
-    <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
+  <!-- SEO = Redes Sociales -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
 
-    <!-- links de estilos -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- Se cambia el tema de algunos navegadores -->
-    <meta name="theme-color" content="#fafafa" />
-  </head>
-  <body>
-    <!-- *** ESTRUCTURA SEMÁNTICA *** -->
-    <!-- Header (encabezado de la página, zona superior) -->
-    <header>
-      <!-- nav (el navegador de toda la web) -->
-      <nav>
-        <a href="" class="link1">link1</a>
-        <a href="" class="link2">link2</a>
-        <a href="" class="link3">link3</a>
-        <a href="" class="link4">link4</a>
-      </nav>
-    </header>
-    <!-- Main (centro de la página, zona central) -->
-    <main>
-      <!-- section y article (posibilidades dentro de main) -->
-    </main>
-    <!-- Footer (final de la página, zona inferior) -->
-    <footer>
-      <h4>&copy;Copyright</h4>
-    </footer>
+  <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- icono de acceso para IOS -->
+  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
 
-    <!-- *** Google Analytics *** -->
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
-  </body>
+  <!-- links de estilos -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- Se cambia el tema de algunos navegadores -->
+  <meta name="theme-color" content="#fafafa" />
+</head>
+
+<body>
+  <header>
+    <section>
+      <picture>
+        <!-- section y article (posibilidades dentro de main) -->
+        <source srcset="img/tablet/banner.jpg 1x, img/tablet/banner@2x.jpg 2x"
+          media="(min-width:768px) and (max-width:1024px) and (orientation: portrait)" />
+
+        <!-- Imagen de respaldo -->
+        <img src="img/desktop/banner.jpg" alt="banner" />
+      </picture>
+    </section>
+  </header>
+  <!-- Main (centro de la página, zona central) -->
+
+  <main>
+    <section>
+      <h1>¿Cómo te gustan los desayunos?</h1>
+      <ul>
+        <li>
+          <form class="formulario" name="contact" method="POST" data-netlify="true">
+            <input class="fecha" type="date" name="fecha de nacimiento" min="01/01/1950" max="01/01/2021">Fecha de nacimiento
+        </li>
+        <li>
+          <input type="radio" name="bebida" value="Té">Té
+          <input type="radio" name="bebida" value="Café">Café
+        </li>
+        <li>
+          <label for="cafes">¿Cúantos cafes tomas durante el desayuno?</label>
+          <input type="number" name="horario" min="0" max="3">
+          
+        </li>
+        <li>
+          <label for="zumos">¿Cúantos zumos tomas durante el desayuno?</label>
+          <input type="number" name="horario" min="0" max="3">
+        </li>
+        <li>
+          <select name="comida">
+            <option value="huevos fritos">Huevos fritos</option>
+            <option value="huevos revueltos">Huevos revueltos</option>
+            <option value="huevos duros">Huevos duros</option>
+        </li>
+        <li>
+          <input type="checkbox" name="v1" value="desayuno continental"> Desayuno continental
+          <input type="checkbox" name="v2" value="desayuno local">Desayuno local
+          <input type="checkbox" name="v3" value="otro"> Otro
+        </li>
+        <Textarea name="sugerencias" cols="30" rows="10"
+          placeholder="escribe tu sugerencia">Escribe tus sugerencias</Textarea>
+        <li>
+        </li>
+        <li>
+          <button type="submit">Enviar</button>
+          <button type="reset">Borrar</button>
+        </li>
+        </ul>
+    </section>
+      </select>
+
+    </form>
+
+
+
+  </main>
+  <!-- Footer (final de la página, zona inferior) -->
+  <footer>
+
+  </footer>
+
+  <!-- *** Google Analytics *** -->
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
 </html>
