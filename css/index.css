@@ -1,16 +1,12 @@
 /* *********************************** */
 /* *** Estilos SOLO para index.html *** */
 /* *********************************** */
-body{
-    margin-top: 10px;
 
-}
 
 picture{
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 img{
@@ -19,17 +15,85 @@ border: solid 1px black;
 border-radius: 10px;
 }
 
-main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: cyan;
-    padding-bottom: 5px;
+h1{
+  
+   font-size: 50px;
+   font-family: sans-serif;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+    margin:10px;
+   border-radius:30px;
+   border:1px solid;
+   background-color: rgb(185, 172, 159);
 }
 
-h1{
-    padding: 5px;
+.formulario{
+width: 100vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex-wrap: wrap;
+background-color: coral;
+font-family: sans-serif
+}
+
+.ol{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.fecha{
+    margin: 15px;
+    width:7%;
+    text-align:center;
+}
+
+.tipo_desayuno{
+display: flex;
+justify-content:space-evenly;
+border:1px solid;
+margin: 15px;
+width: 30%;
+}
+
+.bebidas{
+    display: flex;
+    justify-content:space-evenly;
+    border:1px solid;
+    margin: 15px;
+    width: 30%;
+}
+
+.cafes{
+    border:1px solid;
+    margin: 15px;
+    width: 27%;
+}
+
+.zumos{
+    border:1px solid;
+    margin: 15px;
+    width: 27%;
+}
+
+.comida{
+    border:1px solid;
+    margin: 15px;
+    width: 20%;
+}
+
+.sugerencias{
+    display: flex;
+    justify-content: center;
+     margin: 15px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
 }
 

@@ -30,66 +30,92 @@
 
 <body>
   <header>
-    <section>
+    <section class="banner">
+      <!-- **** Contenido Gráfico **** -->
+      <!-- Primer opción siempre es SVG -->
+
+      <!-- Segunda opción siempre WebP -->
+      <!-- Tercera opción es JPG -->
+      <!-- La peor PNG ó GIF -->
+      <!-- SIN RETINA DISPLA -->
       <picture>
-        <!-- section y article (posibilidades dentro de main) -->
-        <source srcset="img/tablet/banner.jpg 1x, img/tablet/banner@2x.jpg 2x"
+        <!-- móvil -->
+        <source
+          srcset="img/smartphone/banner_cafe.jpg, img/smartphone/banner_cafe@2x.jpg 2x, img/smartphone/banner_cafe@3x.jpg 3x"
+          media="(min-width:320px) and (max-width:450px)" />
+
+        <!-- ipad -->
+        <source srcset="img/tablet/banner_desayuno.jpg 1x, img/tablet/banner_desayuno@2x.jpg 2x"
           media="(min-width:768px) and (max-width:1024px) and (orientation: portrait)" />
 
+        <!-- escritorio -->
+        <source srcset="img/desktop/banner_mimosa.jpg, img/desktop/banner@2x.jpg 2x" media="(min-width:1025px)" />
+
         <!-- Imagen de respaldo -->
-        <img src="img/desktop/banner.jpg" alt="banner" />
+        <img src="img/desktop/banner_mimosa.jpg" alt="banner_mimosa" />
       </picture>
     </section>
   </header>
   <!-- Main (centro de la página, zona central) -->
 
   <main>
-    <section>
+    <section class="formulario">
       <h1>¿Cómo te gustan los desayunos?</h1>
-      <ul>
+      <ol>
         <li>
           <form class="formulario" name="contact" method="POST" data-netlify="true">
-            <input class="fecha" type="date" name="fecha de nacimiento" min="01/01/1950" max="01/01/2021">Fecha de nacimiento
+            <input class="fecha" type="date" name="fecha de nacimiento" min="01/01/1950" max="01/01/2021">
         </li>
-        <li>
+
+        <li class="tipo_desayuno">
+          <input type="checkbox" name="v1" value="desayuno continental"> Desayuno continental
+          <input type="checkbox" name="v2" value="desayuno local"> Desayuno local
+          <input type="checkbox" name="v3" value="otro"> Otro
+        </li>
+
+        <li class="bebidas">
           <input type="radio" name="bebida" value="Té">Té
           <input type="radio" name="bebida" value="Café">Café
+          <input type="radio" name="bebida" value="Colacao">Colacao
+          <input type="radio" name="bebida" value="Nesquik">Nesquik
+          <input type="radio" name="bebida" value="Otro">Otro
         </li>
-        <li>
+
+        <li class="cafes">
           <label for="cafes">¿Cúantos cafes tomas durante el desayuno?</label>
           <input type="number" name="horario" min="0" max="3">
-          
         </li>
-        <li>
+
+        <li class="zumos">
           <label for="zumos">¿Cúantos zumos tomas durante el desayuno?</label>
           <input type="number" name="horario" min="0" max="3">
         </li>
-        <li>
+
+        <li class="comida">¿Cómo te gustan los huevos?
           <select name="comida">
-            <option value="huevos fritos">Huevos fritos</option>
-            <option value="huevos revueltos">Huevos revueltos</option>
-            <option value="huevos duros">Huevos duros</option>
+            <option value="huevos fritos">Fritos</option>
+            <option value="huevos revueltos">Revueltos</option>
+            <option value="huevos duros">Duros</option>
+            <option value="huevos duros">Mollet</option>
+            <option value="huevos duros">Florentina</option>
+            <option value="huevos duros">Benedict</option>
+            <option value="huevos duros">Tortilla</option>
+          </select>
         </li>
-        <li>
-          <input type="checkbox" name="v1" value="desayuno continental"> Desayuno continental
-          <input type="checkbox" name="v2" value="desayuno local">Desayuno local
-          <input type="checkbox" name="v3" value="otro"> Otro
+
+
+        <li class="sugerencias">
+          <Textarea name="sugerencias" cols="25" rows="10" placeholder=" Escribe tus sugerencias"></Textarea>
         </li>
-        <Textarea name="sugerencias" cols="30" rows="10"
-          placeholder="escribe tu sugerencia">Escribe tus sugerencias</Textarea>
-        <li>
-        </li>
-        <li>
+
+        <li class="boton">
           <button type="submit">Enviar</button>
           <button type="reset">Borrar</button>
         </li>
-        </ul>
+      </ol>
     </section>
-      </select>
 
     </form>
-
-
 
   </main>
   <!-- Footer (final de la página, zona inferior) -->
